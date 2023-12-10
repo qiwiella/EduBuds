@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3646118191
+    locked: 0
+  - name: Cands
+    uniqueID: 2180936061
+    locked: 0
