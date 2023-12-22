@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sugarmaker : MonoBehaviour
+public class Sugar_maker : MonoBehaviour
 {
     public GameObject[] pre_Cands;
     public int width, height;
     //oyundaki þekerleri bu matrise kaydet, konumuna göre
-    public Cands[,] candies_in_the_game;
+    public static Cands[,] candies_in_the_game;
 
 
     // döngüye alarak kaç tane oluþturacaðýmýza unity inspector kýsmýndan vermek istedim.
