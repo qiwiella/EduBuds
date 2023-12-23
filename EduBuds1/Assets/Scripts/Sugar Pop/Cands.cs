@@ -83,24 +83,26 @@ public class Cands : MonoBehaviour
 
                 if ((difference_x == 1 && difference_y == 0) || (difference_x == 0 && difference_y == 1))
                 {
-                    Debug.Log("Let Them Change! ");
-                    first_choice_cand.target_location = second_choice_cand.transform.position;
-                    second_choice_cand.target_location = first_choice_cand.transform.position;
-                    first_choice_cand.change_location = true;
-                    second_choice_cand.change_location = true;
+                    if(first_choice_cand.colour != second_choice_cand.colour)
+                    {
+                        Debug.Log("Let Them Change! ");
+                        first_choice_cand.target_location = second_choice_cand.transform.position;
+                        second_choice_cand.target_location = first_choice_cand.transform.position;
+                        first_choice_cand.change_location = true;
+                        second_choice_cand.change_location = true;
 
-                    Change_Variables();
-                    first_choice_cand.Check_X_Axis();
-                    first_choice_cand.Check_Y_Axis();
-                    second_choice_cand.Check_X_Axis();
-                    second_choice_cand.Check_Y_Axis();
+                        Change_Variables();
+                        first_choice_cand.Check_X_Axis();
+                        first_choice_cand.Check_Y_Axis();
+                        second_choice_cand.Check_X_Axis();
+                        second_choice_cand.Check_Y_Axis();
 
-                    StartCoroutine(first_choice_cand.Disappear());
-                    StartCoroutine(second_choice_cand.Disappear());
+                        StartCoroutine(first_choice_cand.Disappear());
+                        StartCoroutine(second_choice_cand.Disappear());
 
-                    first_choice_cand = null;
-                    second_choice_cand = null;
-                    
+                        first_choice_cand = null;
+                        second_choice_cand = null;
+                    }
                 }
                 else
                 {
