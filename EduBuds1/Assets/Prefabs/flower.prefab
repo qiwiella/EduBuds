@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3297272032003489315}
   - component: {fileID: -6309539913401015261}
   - component: {fileID: -1594320529379081627}
+  - component: {fileID: -263836773219864236}
   m_Layer: 0
   m_Name: flower
   m_TagString: Untagged
@@ -98,6 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34e84a6e4b6f5d449c9f8ba8dba4d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target_location: {x: 0, y: 0, z: 0}
+  change_location: 0
+  sugar_x_axis: []
+  sugar_y_axis: []
+  colour: 
 --- !u!61 &-1594320529379081627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +150,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.1, y: 2.1}
   m_EdgeRadius: 0
+--- !u!95 &-263836773219864236
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330419147445860811}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 662399ed6eb2887489a80f0470ef76ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

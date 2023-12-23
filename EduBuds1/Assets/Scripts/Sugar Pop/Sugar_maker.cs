@@ -26,8 +26,8 @@ public class Sugar_maker : MonoBehaviour
     {
         GameObject random_candy_object = Create_Random_Candy();
 
-        // rastgele þeker al, kordinat, bir rotasyon vermedik(0,0)
-        GameObject new_cands = GameObject.Instantiate (random_candy_object, new Vector2 (x, y+10), Quaternion.identity);
+        // rastgele þeker al, kordinat, bir rotasyon vermedik(0,0,0)
+        GameObject new_cands = GameObject.Instantiate (random_candy_object, new Vector3 (x, y+10, 0), Quaternion.identity);
 
         // Her þekerin, þeker scriptini al, yeni konum oluþtur(creat_new_location) yap.
 
@@ -37,6 +37,7 @@ public class Sugar_maker : MonoBehaviour
         candies_in_the_game[x, y] = cand;
 
         // ben y de 10 konumda duruyorum y dðerine gelmesi için yavaþ yavaþ düþmesi gerekecek
+        
     }
 
     public GameObject Create_Random_Candy()   //hangi þekeri oluþturduysam onu belirteceðim

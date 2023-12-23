@@ -78,9 +78,10 @@ public class Cands : MonoBehaviour
             if (first_choice_cand != second_choice_cand)
             {
                 //Mutlak deðer içerisinde x ve y farkýný bul.
-                float difference_x = Mathf.Abs(first_choice_cand.x - second_choice_cand.y);
+                float difference_x = Mathf.Abs(first_choice_cand.x - second_choice_cand.x);
                 float difference_y = Mathf.Abs(first_choice_cand.y - second_choice_cand.y);
-                if (difference_x + difference_y == 1)
+
+                if ((difference_x == 1 && difference_y == 0) || (difference_x == 0 && difference_y == 1))
                 {
                     Debug.Log("Let Them Change! ");
                     first_choice_cand.target_location = second_choice_cand.transform.position;
@@ -98,6 +99,7 @@ public class Cands : MonoBehaviour
                     StartCoroutine(second_choice_cand.Disappear());
 
                     first_choice_cand = null;
+                    second_choice_cand = null;
                     
                 }
                 else
@@ -128,8 +130,14 @@ public class Cands : MonoBehaviour
     }
     void Change_Places()
     {
-        transform.position = Vector3.Lerp(transform.position, target_location, 0.1f);
+        transform.position = Vector3.Lerp(transform.position, target_location, Time.deltaTime * 5f); // Örnek bir hýz deðeri, ihtiyaca göre ayarlayabilirsiniz.
+        if (Vector3.Distance(transform.position, target_location) < 0.01f)
+        {
+            transform.position = target_location;
+            change_location = false;
+        }
     }
+
     void Check_X_Axis()
     {
         //saðýndaki nesnelerin kontrolü
@@ -145,7 +153,7 @@ public class Cands : MonoBehaviour
                 break;
             }
         }
-        for (int i = (int) x-1; i > 0; i--)
+        for (int i = (int) x-1; i >= 0; i--)
         {
             Cands candy_on_the_right = Sugar_maker.candies_in_the_game[i, (int) y];
             if( colour == candy_on_the_right.colour)
@@ -161,7 +169,7 @@ public class Cands : MonoBehaviour
     void Check_Y_Axis()
     {
         //saðýndaki nesnelerin kontrolü
-        for (int i = (int) y + 1; i < Sugar_maker.candies_in_the_game.GetLength(0); i++)
+        for (int i = (int) y + 1; i < Sugar_maker.candies_in_the_game.GetLength(1); i++)
         {
             Cands candy_on_the_right = Sugar_maker.candies_in_the_game[(int) x, i];
             if (colour == candy_on_the_right.colour)
@@ -173,7 +181,7 @@ public class Cands : MonoBehaviour
                 break;
             }
         }
-        for (int i = (int) y - 1; i > 0; i--)
+        for (int i = (int) y - 1; i >= 0; i--)
         {
             Cands candy_on_the_right = Sugar_maker.candies_in_the_game[(int) x, i];
             if (colour == candy_on_the_right.colour)
@@ -194,21 +202,21 @@ public class Cands : MonoBehaviour
         //þekerlerinn sayýsý 2 den büyük ise
         if(sugar_x_axis.Count >= 2 || sugar_y_axis.Count >= 2)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             if(sugar_x_axis.Count >= 2)
             {
                 //buradaki elamanlarý tek tek al
                 foreach( var item in sugar_x_axis)
                 {
                     //þeker objesinin oun objesinde yok et þeker companentiyle birlikte
-                    Destroy(item.gameObject);
+                    //Destroy(item.gameObject);
                 }
             }
             else
             {
                 foreach (var item in sugar_y_axis)
                 {
-                    Destroy(item.gameObject);
+                    //Destroy(item.gameObject);
                 }
             }
         }
