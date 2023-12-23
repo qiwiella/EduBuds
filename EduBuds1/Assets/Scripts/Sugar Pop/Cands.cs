@@ -10,8 +10,16 @@ public class Cands : MonoBehaviour
 
     public static Cands first_choice_cand;
     public static Cands second_choice_cand;
+
     public Vector3 target_location; // þekerimizin yeni gitmek istediði hedef konum
     public bool change_location = false;
+
+    // þekerleri listede x ve y eksenindekiler olarak ayrý ayrý tutuyoruz.
+    public List <Cands> sugar_x_axis;
+    public List<Cands> sugar_y_axis;
+
+    public string colour;
+
     
     
 
@@ -81,6 +89,13 @@ public class Cands : MonoBehaviour
                     second_choice_cand.change_location = true;
 
                     Change_Variables();
+                    first_choice_cand.Check_X_Axis();
+                    first_choice_cand.Check_Y_Axis();
+                    second_choice_cand.Check_X_Axis();
+                    second_choice_cand.Check_Y_Axis();
+
+                    StartCoroutine(first_choice_cand.Disappear());
+                    StartCoroutine(second_choice_cand.Disappear());
 
                     first_choice_cand = null;
                     
@@ -114,6 +129,89 @@ public class Cands : MonoBehaviour
     void Change_Places()
     {
         transform.position = Vector3.Lerp(transform.position, target_location, 0.1f);
+    }
+    void Check_X_Axis()
+    {
+        //saðýndaki nesnelerin kontrolü
+        for (int i = (int) x + 1; i < Sugar_maker.candies_in_the_game.GetLength(0); i++)
+        {
+            Cands candy_on_the_right = Sugar_maker.candies_in_the_game[i, (int) y];
+            if( colour == candy_on_the_right.colour)
+            {
+                sugar_x_axis.Add(candy_on_the_right);
+            }
+            else
+            {
+                break;
+            }
+        }
+        for (int i = (int) x-1; i > 0; i--)
+        {
+            Cands candy_on_the_right = Sugar_maker.candies_in_the_game[i, (int) y];
+            if( colour == candy_on_the_right.colour)
+            {
+                sugar_x_axis.Add(candy_on_the_right);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    void Check_Y_Axis()
+    {
+        //saðýndaki nesnelerin kontrolü
+        for (int i = (int) y + 1; i < Sugar_maker.candies_in_the_game.GetLength(0); i++)
+        {
+            Cands candy_on_the_right = Sugar_maker.candies_in_the_game[(int) x, i];
+            if (colour == candy_on_the_right.colour)
+            {
+                sugar_y_axis.Add(candy_on_the_right);
+            }
+            else
+            {
+                break;
+            }
+        }
+        for (int i = (int) y - 1; i > 0; i--)
+        {
+            Cands candy_on_the_right = Sugar_maker.candies_in_the_game[(int) x, i];
+            if (colour == candy_on_the_right.colour)
+            {
+                sugar_y_axis.Add(candy_on_the_right);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    //oynayýcýnýn iç þekeri ayný hiaya geldiðini görmesi için enumerator kullanýyorum.
+    //direktr yok etmesini istemiyorum. Disappear = yok olamak, yok etmek
+    IEnumerator Disappear()
+    {
+        yield return new WaitForSeconds(0.3f);
+        //þekerlerinn sayýsý 2 den büyük ise
+        if(sugar_x_axis.Count >= 2 || sugar_y_axis.Count >= 2)
+        {
+            Destroy(gameObject);
+            if(sugar_x_axis.Count >= 2)
+            {
+                //buradaki elamanlarý tek tek al
+                foreach( var item in sugar_x_axis)
+                {
+                    //þeker objesinin oun objesinde yok et þeker companentiyle birlikte
+                    Destroy(item.gameObject);
+                }
+            }
+            else
+            {
+                foreach (var item in sugar_y_axis)
+                {
+                    Destroy(item.gameObject);
+                }
+            }
+        }
     }
 }
 
