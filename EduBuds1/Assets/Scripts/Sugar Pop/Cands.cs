@@ -204,21 +204,21 @@ public class Cands : MonoBehaviour
         //þekerlerinn sayýsý 2 den büyük ise
         if(sugar_x_axis.Count >= 2 || sugar_y_axis.Count >= 2)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
             if(sugar_x_axis.Count >= 2)
             {
                 //buradaki elamanlarý tek tek al
                 foreach( var item in sugar_x_axis)
                 {
                     //þeker objesinin oun objesinde yok et þeker companentiyle birlikte
-                    //Destroy(item.gameObject);
+                    Destroy(item.gameObject);
                 }
             }
             else
             {
                 foreach (var item in sugar_y_axis)
                 {
-                    //Destroy(item.gameObject);
+                    Destroy(item.gameObject);
                 }
             }
         }
