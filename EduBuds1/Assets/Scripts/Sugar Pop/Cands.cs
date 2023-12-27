@@ -20,6 +20,7 @@ public class Cands : MonoBehaviour
 
     public string colour;
 
+    Animator animator;
     
     
 
@@ -27,6 +28,7 @@ public class Cands : MonoBehaviour
     void Start(){
         //seçim tagýndaki objeyi bu ve al
         choice_tool = GameObject.FindGameObjectWithTag("choice");
+        animator = GetComponent<Animator>();
     }
     // herbir þekerin hangi konumda olduðunu tutmamýz gerekiyor
     // düþme iþlemini kontrol etmemiz geekiyor
@@ -43,7 +45,7 @@ public class Cands : MonoBehaviour
         {
             //Eðer þekerimin konumum, hedef konumumdan 0.2f den küçükse 
             //düþme learpünü kapatsýn.en son posizyonu hedef konuma eþitlesin.
-            if( transform.position.y-y<0.05f)
+            if( transform.position.y-y < 0.05f)
             {
                 should_it_fall = false;
                 transform.position = new Vector3(x, y, 0);
@@ -196,7 +198,7 @@ public class Cands : MonoBehaviour
             }
         }
     }
-    //oynayýcýnýn iç þekeri ayný hiaya geldiðini görmesi için enumerator kullanýyorum.
+    //oynayýcýnýn iç þekeri ayný hizaya geldiðini görmesi için enumerator kullanýyorum.
     //direktr yok etmesini istemiyorum. Disappear = yok olamak, yok etmek
     IEnumerator Disappear()
     {
@@ -210,7 +212,7 @@ public class Cands : MonoBehaviour
                 //buradaki elamanlarý tek tek al
                 foreach( var item in sugar_x_axis)
                 {
-                    //þeker objesinin oun objesinde yok et þeker companentiyle birlikte
+                    //þeker objesinin oyun objesinde yok et þeker companentiyle birlikte
                     Destroy(item.gameObject);
                 }
             }
@@ -223,6 +225,7 @@ public class Cands : MonoBehaviour
             }
         }
     }
+
 }
 
 

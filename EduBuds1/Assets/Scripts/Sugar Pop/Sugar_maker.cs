@@ -38,6 +38,7 @@ public class Sugar_maker : MonoBehaviour
 
         // ben y de 10 konumda duruyorum y dðerine gelmesi için yavaþ yavaþ düþmesi gerekecek
         StartCoroutine(MoveCandDown(cand));
+
     }
     IEnumerator MoveCandDown(Cands cand)
     {
