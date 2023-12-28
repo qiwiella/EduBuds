@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2649b7a66f5a98541b65eba835a11321
+guid: 0477a9a76f8da8840802785b938db719
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5839417812078802048
-    second: Black_girl_0
+      213: 9083969447635318612
+    second: moon_0
+  - first:
+      213: -5679657590885005731
+    second: moon_1
+  - first:
+      213: -1825352000054201894
+    second: moon_2
+  - first:
+      213: -6130851942531297651
+    second: moon_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,29 +103,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Black_girl_0
+      name: moon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 214
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +121,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 084bb00cf87c90150800000000000000
-      internalID: 5839417812078802048
+      spriteID: 457fdcc651eb01e70800000000000000
+      internalID: 9083969447635318612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moon_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 191
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56c271638dcd21b0800000000000000
+      internalID: -5679657590885005731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moon_2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 114
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad178bee60c0ba6e0800000000000000
+      internalID: -1825352000054201894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moon_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e88e214a6daeaa0800000000000000
+      internalID: -6130851942531297651
       vertices: []
       indices: 
       edges: []
@@ -140,8 +200,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Black_girl_0: 5839417812078802048
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
