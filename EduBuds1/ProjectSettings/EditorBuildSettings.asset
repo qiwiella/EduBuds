@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Sugar Pop.unity
-    guid: bd3056f21f0d3184f96da61e121685be
+    guid: 5a184758998e87f4295c64593b3b3f52
+  - enabled: 1
+    path: Assets/Scenes/PairMainMenu.unity
+    guid: ee05099f438532a42b752085d6923a2b
+  - enabled: 1
+    path: Assets/Scenes/PairSetGame.unity
+    guid: 0fe026f85e508114599258350f3e1c84
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
