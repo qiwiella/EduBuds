@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameControl : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     //Private deðiþkeni arayüzde eriþim için 
     [SerializeField]
