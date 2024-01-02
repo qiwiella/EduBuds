@@ -6,7 +6,7 @@ public class TouchRotation : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        if (GameControl.WIN)
+        if (!GameControl.WIN)
             transform.Rotate(0f, 0f, 90f);
     }
 }

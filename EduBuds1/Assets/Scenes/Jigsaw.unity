@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 55564635}
   - component: {fileID: 55564634}
   - component: {fileID: 55564633}
+  - component: {fileID: 55564636}
   m_Layer: 0
   m_Name: Pink_girl_7
   m_TagString: Untagged
@@ -264,6 +265,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &55564636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55564631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &170282188
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +291,7 @@ GameObject:
   - component: {fileID: 170282192}
   - component: {fileID: 170282191}
   - component: {fileID: 170282190}
+  - component: {fileID: 170282193}
   m_Layer: 0
   m_Name: Pink_girl_12
   m_TagString: Untagged
@@ -408,6 +424,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &170282193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170282188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &270706923
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +450,7 @@ GameObject:
   - component: {fileID: 270706927}
   - component: {fileID: 270706926}
   - component: {fileID: 270706925}
+  - component: {fileID: 270706928}
   m_Layer: 0
   m_Name: Pink_girl_9
   m_TagString: Untagged
@@ -552,6 +583,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &270706928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270706923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &309712743
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +673,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -667,6 +712,7 @@ GameObject:
   - component: {fileID: 411740060}
   - component: {fileID: 411740059}
   - component: {fileID: 411740058}
+  - component: {fileID: 411740061}
   m_Layer: 0
   m_Name: Pink_girl_15
   m_TagString: Untagged
@@ -799,6 +845,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &411740061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411740056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &469012098
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +871,7 @@ GameObject:
   - component: {fileID: 469012102}
   - component: {fileID: 469012101}
   - component: {fileID: 469012100}
+  - component: {fileID: 469012103}
   m_Layer: 0
   m_Name: Pink_girl_2
   m_TagString: Untagged
@@ -943,6 +1004,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &469012103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469012098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &609664504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1088,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "W\n\u0130\nN"
+  m_Text: 'W
+
+    I
+
+    N'
 --- !u!222 &609664507
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1034,6 +1113,7 @@ GameObject:
   - component: {fileID: 611882245}
   - component: {fileID: 611882244}
   - component: {fileID: 611882243}
+  - component: {fileID: 611882246}
   m_Layer: 0
   m_Name: Pink_girl_14
   m_TagString: Untagged
@@ -1166,6 +1246,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &611882246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611882241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &669894912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1272,7 @@ GameObject:
   - component: {fileID: 669894916}
   - component: {fileID: 669894915}
   - component: {fileID: 669894914}
+  - component: {fileID: 669894917}
   m_Layer: 0
   m_Name: Pink_girl_10
   m_TagString: Untagged
@@ -1310,6 +1405,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &669894917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669894912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &685430287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1431,7 @@ GameObject:
   - component: {fileID: 685430291}
   - component: {fileID: 685430290}
   - component: {fileID: 685430289}
+  - component: {fileID: 685430292}
   m_Layer: 0
   m_Name: Pink_girl_8
   m_TagString: Untagged
@@ -1454,6 +1564,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &685430292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685430287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &764272403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1658,7 @@ GameObject:
   - component: {fileID: 836232437}
   - component: {fileID: 836232436}
   - component: {fileID: 836232435}
+  - component: {fileID: 836232438}
   m_Layer: 0
   m_Name: Pink_girl_4
   m_TagString: Untagged
@@ -1666,6 +1791,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &836232438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836232433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &894453003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1817,7 @@ GameObject:
   - component: {fileID: 894453007}
   - component: {fileID: 894453006}
   - component: {fileID: 894453005}
+  - component: {fileID: 894453008}
   m_Layer: 0
   m_Name: Pink_girl_13
   m_TagString: Untagged
@@ -1810,6 +1950,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &894453008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894453003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1129512837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1976,7 @@ GameObject:
   - component: {fileID: 1129512841}
   - component: {fileID: 1129512840}
   - component: {fileID: 1129512839}
+  - component: {fileID: 1129512842}
   m_Layer: 0
   m_Name: Pink_girl_0
   m_TagString: Untagged
@@ -1954,6 +2109,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1129512842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129512837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1197313143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +2135,7 @@ GameObject:
   - component: {fileID: 1197313147}
   - component: {fileID: 1197313146}
   - component: {fileID: 1197313145}
+  - component: {fileID: 1197313148}
   m_Layer: 0
   m_Name: Pink_girl_11
   m_TagString: Untagged
@@ -2098,6 +2268,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1197313148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197313143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1252238839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2294,7 @@ GameObject:
   - component: {fileID: 1252238843}
   - component: {fileID: 1252238842}
   - component: {fileID: 1252238841}
+  - component: {fileID: 1252238844}
   m_Layer: 0
   m_Name: Pink_girl_6
   m_TagString: Untagged
@@ -2242,6 +2427,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1252238844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252238839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1286543101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2453,7 @@ GameObject:
   - component: {fileID: 1286543105}
   - component: {fileID: 1286543104}
   - component: {fileID: 1286543103}
+  - component: {fileID: 1286543106}
   m_Layer: 0
   m_Name: Pink_girl_3
   m_TagString: Untagged
@@ -2386,6 +2586,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1286543106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286543101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1303149229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,6 +2612,7 @@ GameObject:
   - component: {fileID: 1303149233}
   - component: {fileID: 1303149232}
   - component: {fileID: 1303149231}
+  - component: {fileID: 1303149234}
   m_Layer: 0
   m_Name: Pink_girl_1
   m_TagString: Untagged
@@ -2530,6 +2745,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1303149234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303149229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1329801656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2771,7 @@ GameObject:
   - component: {fileID: 1329801660}
   - component: {fileID: 1329801659}
   - component: {fileID: 1329801658}
+  - component: {fileID: 1329801661}
   m_Layer: 0
   m_Name: Pink_girl_5
   m_TagString: Untagged
@@ -2674,6 +2904,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1329801661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329801656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a314311672af574892be3573329d85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pictures: []
+  _WIN: {fileID: 0}
 --- !u!1 &1345281372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +3080,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "W\n\u0130\nN"
+  m_Text: 'W
+
+    I
+
+    N'
 --- !u!222 &1530699438
 CanvasRenderer:
   m_ObjectHideFlags: 0
