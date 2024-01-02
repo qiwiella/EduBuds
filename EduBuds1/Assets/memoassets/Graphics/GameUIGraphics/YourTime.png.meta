@@ -272,7 +272,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      YourTime_0: -1507016538139680131
+      YourTime_1: 5116543768454876354
+      YourTime_2: -4361380130131421018
+      YourTime_3: 5331560870757114402
+      YourTime_4: 4229836964772665420
+      YourTime_5: 8527867539739952576
+      YourTime_6: -4514876759744360313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

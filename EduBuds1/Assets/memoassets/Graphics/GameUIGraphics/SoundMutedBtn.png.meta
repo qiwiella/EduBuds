@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SoundMutedBtn_0: 8775108942488768049
+      SoundMutedBtn_1: 7312493902294307645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -176,7 +176,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SoundEffectsText_0: 3548651317468882577
+      SoundEffectsText_1: 5756349613958988588
+      SoundEffectsText_2: 4127461936680933900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

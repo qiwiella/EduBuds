@@ -368,7 +368,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BestTimeText_0: -7705521012980468729
+      BestTimeText_1: -3659351662813351618
+      BestTimeText_10: 1380777221631487068
+      BestTimeText_2: 6320271611627292691
+      BestTimeText_3: -6062300839027974981
+      BestTimeText_4: 4687357278236764537
+      BestTimeText_5: -8573245087683249619
+      BestTimeText_6: 4339706354300666045
+      BestTimeText_7: 673481444203032774
+      BestTimeText_8: -3053162810472573068
+      BestTimeText_9: -6673539007312214389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

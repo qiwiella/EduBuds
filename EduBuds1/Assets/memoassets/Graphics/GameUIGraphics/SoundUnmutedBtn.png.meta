@@ -200,7 +200,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SoundUnmutedBtn_0: -9075422878188127186
+      SoundUnmutedBtn_1: -4008392047365145177
+      SoundUnmutedBtn_2: 1908876366647961571
+      SoundUnmutedBtn_3: 8345146584902823722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

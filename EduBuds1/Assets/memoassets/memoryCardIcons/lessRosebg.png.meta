@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lessRosebg_0: -5717510325681589028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

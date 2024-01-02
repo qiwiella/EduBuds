@@ -296,7 +296,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CatedoriesText_0: 1525490138516359100
+      CatedoriesText_1: 7242829402524780373
+      CatedoriesText_2: 7642604604618657334
+      CatedoriesText_3: -4131071571736773134
+      CatedoriesText_4: 8423083655313625539
+      CatedoriesText_5: 8217530772967125823
+      CatedoriesText_6: 6714705634397381885
+      CatedoriesText_7: -3383066843909544679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

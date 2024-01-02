@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TimeTrailButton_0: -4158376937708121396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

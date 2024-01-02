@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RadialLoadingBarTexture_0: 1058761241062556263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

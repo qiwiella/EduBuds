@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rainbowOpened_0: -5475378915604842880
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

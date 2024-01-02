@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ClearScoreBoardBtn_0: 8645934344729770230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

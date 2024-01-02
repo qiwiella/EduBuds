@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VegsButtonUp_0: -8860309552222050174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
