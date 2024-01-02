@@ -109,6 +109,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -248,7 +260,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowyCloud_0: 6731430636580772662
+      snowyCloud_1: 6211082277073124409
+      snowyCloud_2: 7989929823838602203
+      snowyCloud_3: -7117784283631207945
+      snowyCloud_4: -6078110367130710658
+      snowyCloud_5: 6633144253838998036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

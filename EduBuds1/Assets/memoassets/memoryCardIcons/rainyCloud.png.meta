@@ -118,6 +118,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -320,7 +332,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rainyCloud_0: 5267237749920970841
+      rainyCloud_1: 6886497304138845202
+      rainyCloud_2: 3999174544775858235
+      rainyCloud_3: 5560220975248716980
+      rainyCloud_4: -3108722985941985338
+      rainyCloud_5: 2027657306933166182
+      rainyCloud_6: 1055314144547504579
+      rainyCloud_7: 4692998797761787460
+      rainyCloud_8: -1959391061969908848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
