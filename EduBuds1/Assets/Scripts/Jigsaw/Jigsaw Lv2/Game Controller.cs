@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject _WIN; //Text
 
-    public static bool WIN; //static iken eriþebileceðim
+    public static bool WIN; //sttic iken eriþebileceðim
 
     private void Start()
     {
