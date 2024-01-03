@@ -18,32 +18,27 @@ public class GameController : MonoBehaviour
         _WIN.SetActive(false);
         WIN = false;
     }
-    
+
     private void Update()
     {
-        if (_pictures[0].rotation.z == 0 &&
-            _pictures[1].rotation.z == 0 &&
-            _pictures[2].rotation.z == 0 &&
-            _pictures[3].rotation.z == 0 &&
-            _pictures[4].rotation.z == 0 &&
-            _pictures[5].rotation.z == 0 &&
-            _pictures[6].rotation.z == 0 &&
-            _pictures[7].rotation.z == 0 &&
-            _pictures[8].rotation.z == 0 &&
-            _pictures[9].rotation.z == 0 &&
-            _pictures[10].rotation.z == 0 &&
-            _pictures[11].rotation.z == 0 &&
-            _pictures[12].rotation.z == 0 &&
-            _pictures[13].rotation.z == 0 &&
-            _pictures[14].rotation.z == 0 &&
-            _pictures[15].rotation.z == 0 )
+        bool allPicturesAligned = true;
+
+        // Dizinin boyutunu kontrol etmek için döngü kullanma
+        for (int i = 0; i < _pictures.Length; i++)
+        {
+            if (_pictures[i].rotation.z != 0)
+            {
+                allPicturesAligned = false;
+                break; // Eðer bir tanesi dahi hizalanmamýþsa döngüden çýk
+            }
+        }
+
+        if (allPicturesAligned)
         {
             _WIN.SetActive(true);
             WIN = true;
         }
-
-        
     }
-    
-   
+
+
 }
