@@ -9,18 +9,10 @@ public class GameSettings : MonoBehaviour
 
     public enum EPairNumber
     {
-<<<<<<< HEAD
-        NotSet,
-        E10Pairs,
-        E15Pairs,
-        E20Pairs,
-=======
         NotSet = 0,
         E10Pairs = 10,
         E15Pairs = 15,
         E20Pairs = 20
->>>>>>> 9136770a9766b40e98f37ea4bb760607839db526
-
     };
 
     public enum EPuzzleCategories
