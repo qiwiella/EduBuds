@@ -1,9 +1,6 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class GameSettings : MonoBehaviour
 {
@@ -12,12 +9,12 @@ public class GameSettings : MonoBehaviour
 
     public enum EPairNumber
     {
-        NotSet = 0;
-        E10Pairs = 10;
-        E15Pairs = 15;
-        E20Pairs = 20;
+        NotSet,
+        E10Pairs,
+        E15Pairs,
+        E20Pairs,
 
-    }
+    };
 
     public enum EPuzzleCategories
     {
