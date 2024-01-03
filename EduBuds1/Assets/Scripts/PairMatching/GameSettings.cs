@@ -12,10 +12,10 @@ public class GameSettings : MonoBehaviour
 
     public enum EPairNumber
     {
-        NotSet = 0;
-        E10Pairs = 10;
-        E15Pairs = 15;
-        E20Pairs = 20;
+        NotSet = 0,
+        E10Pairs = 10,
+        E15Pairs = 15,
+        E20Pairs = 20
 
     }
 
