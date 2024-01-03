@@ -18,8 +18,8 @@ public class GameSettings : MonoBehaviour
     public enum EPuzzleCategories
     {
         NotSet,
-        Fruits,
-        Vegetables
+        Box1,
+        Box2
     }
 
     public struct Settings
