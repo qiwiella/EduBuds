@@ -10,6 +10,10 @@ public class PictureManager : MonoBehaviour
     public Transform PicSpawnPosition;
     public Vector2 StartPosition = new Vector2(-7f, 3f);
     public Vector2 Offset = new Vector2(2.5f, 2.5f);
+    //public Vector2 _offsetFor15Pairs = new Vector2(1.08f, 1.22f);
+    //public Vector2 _offsetFor20Pairs = new Vector2(1.08f, 1.0f);
+    public Vector3 _mewScaleDown = new Vector3(0.9f, 0.9f, 0.001f);
+
 
     [HideInInspector]
     public List<Picture> PictureList;
@@ -23,11 +27,37 @@ public class PictureManager : MonoBehaviour
     void Start()
     {
         LoadMaterials();
-        // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
-        SpawnPictureMesh(5, 4, StartPosition, Offset, false);
 
-        // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
-        MovePicture(5, 4, StartPosition, Offset);
+        if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E10Pairs)
+        {
+
+            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
+            SpawnPictureMesh(5, 2, StartPosition, Offset, false);
+
+            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
+            MovePicture(5, 2, StartPosition, Offset);
+
+        }
+        else if  (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E15Pairs)
+        {
+
+            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
+            SpawnPictureMesh(5, 3, StartPosition, Offset, false);
+
+            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
+            MovePicture(5, 3, StartPosition, Offset);
+
+        }
+        else if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E20Pairs)
+        {
+
+            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
+            SpawnPictureMesh(5, 4, StartPosition, Offset, true);
+
+            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
+            MovePicture(5, 4, StartPosition, Offset);
+
+        }
     }
 
     private void LoadMaterials()
@@ -65,6 +95,11 @@ public class PictureManager : MonoBehaviour
             for (int row = 0; row < rows; row++)
             {
                 var tempPicture = (Picture)Instantiate(PicturePrefab, PicSpawnPosition.position, PicturePrefab.transform.rotation);
+
+                if(scaleDown)
+                {
+                    tempPicture.transform.localScale = _mewScaleDown;
+                }
 
                 // Baþlangýç pozisyonlarý doðrudan burada ayarlanýyor.
                 var targetPosition = new Vector3(StartPosition.x, StartPosition.y , 0.0f);
