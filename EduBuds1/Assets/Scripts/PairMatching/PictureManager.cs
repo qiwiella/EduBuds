@@ -9,6 +9,7 @@ public class PictureManager : MonoBehaviour
     public Picture PicturePrefab;
     public Transform PicSpawnPosition;
     public Vector2 StartPosition = new Vector2(-7f, 3f);
+
     public Vector2 Offset = new Vector2(2.5f, 2.5f);
     //public Vector2 _offsetFor15Pairs = new Vector2(1.08f, 1.22f);
     //public Vector2 _offsetFor20Pairs = new Vector2(1.08f, 1.0f);
