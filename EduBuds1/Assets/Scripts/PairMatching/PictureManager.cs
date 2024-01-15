@@ -9,10 +9,43 @@ public class PictureManager : MonoBehaviour
     public Picture PicturePrefab;
     public Transform PicSpawnPosition;
     public Vector2 StartPosition = new Vector2(-7f, 3f);
+    public Vector2 StartPositionFift = new Vector2(-7.7f, 2.5f);
+    public Vector2 StartPositionTwent = new Vector2(-6.7f, 3f);
+
+    public enum GameState 
+    {   NoAction, 
+        MovingOnPositions, 
+        DeletingPuzzles, 
+        FlipBack, 
+        Checking, 
+        GameEnd 
+    };
+
+    public enum PuzzleState
+    {
+        PuzzleRotating,
+        CanRotate
+    };
+
+    public enum RevealedState
+    {
+        NoRevealed, 
+        OneRevealed,
+        TwoRevealed
+    };
+
+    [HideInInspector]
+    public GameState CurrentGameState;
+    [HideInInspector]
+    public PuzzleState CurrentPuzzleState;
+    [HideInInspector]
+    public RevealedState PuzzleRevealedNumber;
+
 
     public Vector2 Offset = new Vector2(2.5f, 2.5f);
-    //public Vector2 _offsetFor15Pairs = new Vector2(1.08f, 1.22f);
-    //public Vector2 _offsetFor20Pairs = new Vector2(1.08f, 1.0f);
+    public Vector2 OffsetFift = new Vector2(2.3f, 2.5f);
+    public Vector2 OffsetTwent = new Vector2(2.3f, 2.5f);
+
     public Vector3 _mewScaleDown = new Vector3(0.9f, 0.9f, 0.001f);
 
 
@@ -24,41 +57,103 @@ public class PictureManager : MonoBehaviour
     private Material _firstMaterial;
     private string _firstTexturePath;
 
+    private int _firstRevealedPic;
+    private int _secondRevealedPic;
+    private int _revealedPicNumber = 0;
+
 
     void Start()
     {
         LoadMaterials();
 
+        CurrentGameState = GameState.NoAction;
+        CurrentPuzzleState = PuzzleState.CanRotate;
+        PuzzleRevealedNumber = RevealedState.NoRevealed;
+        _revealedPicNumber = 0;
+        _firstRevealedPic = -1;
+        _secondRevealedPic = -1;
+
+
         if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E10Pairs)
         {
+            CurrentGameState = GameState.MovingOnPositions;
 
             // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
-            SpawnPictureMesh(5, 2, StartPosition, Offset, false);
-
-            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
-            MovePicture(5, 2, StartPosition, Offset);
-
-        }
-        else if  (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E15Pairs)
-        {
-
-            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
-            SpawnPictureMesh(5, 3, StartPosition, Offset, false);
-
-            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
-            MovePicture(5, 3, StartPosition, Offset);
-
-        }
-        else if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E20Pairs)
-        {
-
-            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
-            SpawnPictureMesh(5, 4, StartPosition, Offset, true);
+            SpawnPictureMesh(5, 4, StartPosition, Offset, false);
 
             // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
             MovePicture(5, 4, StartPosition, Offset);
 
         }
+        else if  (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E15Pairs)
+        {
+            CurrentGameState = GameState.MovingOnPositions;
+
+            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
+            SpawnPictureMesh(10, 3, StartPositionFift, Offset, false);
+
+            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
+            MovePictureFift(10, 3, StartPositionFift, OffsetFift);
+
+        }
+        else if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E20Pairs)
+        {
+            CurrentGameState = GameState.MovingOnPositions;
+
+            // 5x4 bir resim grid'i oluþturmak üzere metod çaðrýlýyor ve gerekli parametreler veriliyor.
+            SpawnPictureMesh(8, 5, StartPositionTwent, Offset, true);
+
+            // Oluþturulan resimleri hedef konumlarýna taþýmak için metod çaðrýlýyor.
+            MovePictureTwent (8, 5, StartPositionTwent, OffsetTwent);
+
+        }
+    }
+
+    public void CheckPicture()
+    {
+        CurrentGameState = GameState.Checking;
+        _revealedPicNumber = 0;
+
+        for (int id = 0; id < PictureList.Count; id++)
+        {
+            if (PictureList[id].Revealed && _revealedPicNumber < 2)
+            {
+                if (_revealedPicNumber == 0)
+                {
+                    _firstRevealedPic = id;
+                    _revealedPicNumber++;
+                }
+                else if (_revealedPicNumber == 1)
+                {
+                    _secondRevealedPic = id;
+                    _revealedPicNumber++;
+                }
+            }
+        }
+    
+        if ( _revealedPicNumber == 2)
+        {
+            CurrentGameState = GameState.FlipBack;
+        }
+
+        CurrentPuzzleState = PictureManager.PuzzleState.CanRotate;
+
+        if(CurrentGameState == GameState.Checking)
+        {
+            CurrentGameState = GameState.NoAction;
+        }
+    }
+
+    private void FlipBack()
+    {
+        PictureList[_firstRevealedPic].FlipBack();
+        PictureList[_secondRevealedPic].FlipBack();
+
+        PictureList[_firstRevealedPic].Revealed = false;
+        PictureList[_secondRevealedPic].Revealed = false;
+
+        PuzzleRevealedNumber = RevealedState.NoRevealed;
+        CurrentGameState = GameState.NoAction;
     }
 
     private void LoadMaterials()
@@ -84,7 +179,13 @@ public class PictureManager : MonoBehaviour
     }
     void Update()
     {
-        // Gerekirse güncelleme (update) lojikleri eklenir.
+        if(CurrentGameState == GameState.FlipBack)
+        {
+            if(CurrentPuzzleState == PuzzleState.CanRotate)
+            {
+                FlipBack();
+            }
+        }
     }
 
     private void SpawnPictureMesh(int rows, int columns, Vector2 pos, Vector2 offset, bool scaleDown)
@@ -102,12 +203,39 @@ public class PictureManager : MonoBehaviour
                     tempPicture.transform.localScale = _mewScaleDown;
                 }
 
-                // Baþlangýç pozisyonlarý doðrudan burada ayarlanýyor.
-                var targetPosition = new Vector3(StartPosition.x, StartPosition.y , 0.0f);
+                if (columns == 4)
+                {
 
-                tempPicture.transform.position = targetPosition;
-                tempPicture.name = tempPicture.name + 'c' + col + 'r' + row;
-                PictureList.Add(tempPicture);
+                    // Baþlangýç pozisyonlarý doðrudan burada ayarlanýyor.
+                    var targetPosition = new Vector3(StartPosition.x, StartPosition.y, 0.0f);
+
+                    tempPicture.transform.position = targetPosition;
+                    tempPicture.name = tempPicture.name + 'c' + col + 'r' + row;
+                    PictureList.Add(tempPicture);
+
+                }
+                else if (columns == 3)
+                {
+
+                    // Baþlangýç pozisyonlarý doðrudan burada ayarlanýyor.
+                    var targetPosition = new Vector3(StartPositionFift.x, StartPositionFift.y, 0.0f);
+
+                    tempPicture.transform.position = targetPosition;
+                    tempPicture.name = tempPicture.name + 'c' + col + 'r' + row;
+                    PictureList.Add(tempPicture);
+
+                }
+                else if (columns == 5)
+                {
+
+                    // Baþlangýç pozisyonlarý doðrudan burada ayarlanýyor.
+                    var targetPosition = new Vector3(StartPositionTwent.x, StartPositionTwent.y, 0.0f);
+
+                    tempPicture.transform.position = targetPosition;
+                    tempPicture.name = tempPicture.name + 'c' + col + 'r' + row;
+                    PictureList.Add(tempPicture);
+
+                }
             }
         }
 
@@ -178,6 +306,46 @@ public class PictureManager : MonoBehaviour
             }
         }
     }
+
+    private void MovePictureFift(int rows, int columns, Vector2 pos, Vector2 offset)
+    {
+        var index = 0;
+        for (var col = 0; col < columns; col++)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                // Hedef konum, resimlerin x ve y pozisyonlarýna dayalý olarak belirleniyor.
+                var targetPosition = new Vector3(((pos.x - 1) + ((offset.x - 1) * row) + 2), ((pos.y) - ((offset.y - 1) * col)), 0.0f);
+
+                // Resimleri hedef konumlarýna taþýmak için Coroutine kullanýlarak MoveToPosition metoduna baþlatýlýyor.
+                StartCoroutine(MoveToPosition(targetPosition, PictureList[index]));
+
+                // Ýndeks artýrýlýyor.
+                index++;
+            }
+        }
+    }
+
+    private void MovePictureTwent(int rows, int columns, Vector2 pos, Vector2 offset)
+    {
+        var index = 0;
+        for (var col = 0; col < columns; col++)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                // Hedef konum, resimlerin x ve y pozisyonlarýna dayalý olarak belirleniyor.
+                var targetPosition = new Vector3(((pos.x - 1) + ((offset.x - 1) * row) + 2), ((pos.y) - ((offset.y - 1) * col)), 0.0f);
+
+                // Resimleri hedef konumlarýna taþýmak için Coroutine kullanýlarak MoveToPosition metoduna baþlatýlýyor.
+                StartCoroutine(MoveToPosition(targetPosition, PictureList[index]));
+
+                // Ýndeks artýrýlýyor.
+                index++;
+            }
+        }
+    }
+
+
 
     private IEnumerator MoveToPosition(Vector3 target, Picture obj)
     {
