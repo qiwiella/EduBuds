@@ -65,7 +65,7 @@ public class Picture : MonoBehaviour
         {
             while ( rot < angle )
             {
-                var step = Time.deltaTime + rotSpeed1;
+                var step = Time.deltaTime * rotSpeed1;
                 gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 2, 0) * step * dir);
                 if (rot >=  (startAngle - 2) && assigned == false)
                 {
@@ -74,6 +74,7 @@ public class Picture : MonoBehaviour
                 }
 
                 rot += (1 * step * dir);
+
                 yield return null;
             }      
         }
