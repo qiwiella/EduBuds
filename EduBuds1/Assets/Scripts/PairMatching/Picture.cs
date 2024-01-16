@@ -15,6 +15,11 @@ public class Picture : MonoBehaviour
     public bool Revealed = false;
     private PictureManager _pictureManager;
     private bool _clicked = false;
+    private int _index;
+
+    public void SetIndex(int id) {  _index = id; }
+    public int GetIndex() { return _index; }
+
 
     // Start is called before the first frame update
     void Start()
@@ -127,4 +132,6 @@ public class Picture : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().material = _secondMaterial;
     }
+
+    public void Deactivate() {  gameObject.SetActive(false); }
 }
