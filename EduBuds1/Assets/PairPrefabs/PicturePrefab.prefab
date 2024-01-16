@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1267398082824421158}
   - component: {fileID: 2501742730316863154}
   - component: {fileID: 279172120298284354}
+  - component: {fileID: 7527480746580764193}
   - component: {fileID: 3181774244425578082}
-  - component: {fileID: 302974396010602010}
   m_Layer: 0
   m_Name: PicturePrefab
   m_TagString: Untagged
@@ -135,21 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3181774244425578082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2279833913479596062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa32c4e4b846acd4086672698c1e1156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PressSound: {fileID: 8300000, guid: 54d6bd0fc9311cf4e81cf112066069a4, type: 3}
-  Revealed: 0
---- !u!82 &302974396010602010
+--- !u!82 &7527480746580764193
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,3 +231,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3181774244425578082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2279833913479596062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa32c4e4b846acd4086672698c1e1156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

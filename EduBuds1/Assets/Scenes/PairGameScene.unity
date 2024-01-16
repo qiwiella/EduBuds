@@ -521,7 +521,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: PairGameScene
+          m_StringArgument: PairSetGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &942226224
@@ -792,18 +792,6 @@ MonoBehaviour:
           m_StringArgument: PairSetGame
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 337746140}
-        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: ResetGameSettings
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1816495646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,9 +842,8 @@ GameObject:
   - component: {fileID: 1917780855}
   - component: {fileID: 1917780854}
   - component: {fileID: 1917780853}
-  - component: {fileID: 1917780856}
   m_Layer: 5
-  m_Name: MutedSndButton
+  m_Name: MutedButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,19 +911,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917780854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1917780856}
-        m_TargetAssemblyTypeName: MuteSoundEffectButton, Assembly-CSharp
-        m_MethodName: ToggleFxIcon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1917780854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,20 +950,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917780851}
   m_CullTransparentMesh: 1
---- !u!114 &1917780856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917780851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67849e91ba78a534ca1d8977ee6be8ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnMutedFxSprite: {fileID: -209402946931333807, guid: 9d8597232580ac54e91b1801245d1ce7, type: 3}
-  MutedFxSprite: {fileID: -1077130320801284777, guid: 1f852769d5babea4ca03353e3fb48099, type: 3}
 --- !u!1 &1974011381
 GameObject:
   m_ObjectHideFlags: 0

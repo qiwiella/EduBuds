@@ -10,7 +10,6 @@ public class GameSettings : MonoBehaviour
 
     // Ayar sayýsýný belirten sabit bir integer tanýmlanýr.
     private const int SettingsNumber = 2;
-    private bool _muteFxPermanently = false;    
 
     // Eþleme sayýsýný belirten bir enum tanýmlanýr.
     public enum EPairNumber
@@ -139,16 +138,5 @@ public class GameSettings : MonoBehaviour
             Debug.LogError("ERROR : CANNOT GET DIRECTORY NAME!");
             return "";
         }
-    }
-
-
-    public void MuteSoundEffectPermanently(bool muted)
-    {
-        _muteFxPermanently = muted;
-    }
-
-    public bool isSoundEffectMutedPermanently()
-    {
-        return _muteFxPermanently;
     }
 }
