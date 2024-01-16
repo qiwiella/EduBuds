@@ -6,6 +6,7 @@ using static UnityEditor.U2D.ScriptablePacker;
 
 public class Picture : MonoBehaviour
 {
+    public AudioClip PressSound;
     private Material _firstMaterial;
     private Material _secondMaterial;
 
@@ -16,6 +17,8 @@ public class Picture : MonoBehaviour
     private PictureManager _pictureManager;
     private bool _clicked = false;
     private int _index;
+
+    private AudioSource _audio;
 
     public void SetIndex(int id) {  _index = id; }
     public int GetIndex() { return _index; }
@@ -28,6 +31,9 @@ public class Picture : MonoBehaviour
         _clicked = false;
         _pictureManager = GameObject.Find("[PictureManager]").GetComponent<PictureManager>(); 
         _currentRotation = gameObject.transform.rotation;   
+
+        _audio = GetComponent<AudioSource>();
+        _audio.clip = PressSound;
     }
 
     // Update is called once per frame
@@ -41,8 +47,12 @@ public class Picture : MonoBehaviour
         if (_clicked == false)
         {
             _pictureManager.CurrentPuzzleState = PictureManager.PuzzleState.PuzzleRotating;
+            if (GameSettings.Instance.isSoundEffectMutedPermanently() == false)
+                _audio.Play();
+
             StartCoroutine(LoopRotation(45, false));
             _clicked = true;
+
         }
     }
 
@@ -52,6 +62,9 @@ public class Picture : MonoBehaviour
         {
             _pictureManager.CurrentPuzzleState = PictureManager.PuzzleState.PuzzleRotating;
             Revealed = false;
+            if (GameSettings.Instance.isSoundEffectMutedPermanently() == false)
+                _audio.Play();
+
             StartCoroutine(LoopRotation(45, true));
         }
     }
@@ -133,5 +146,17 @@ public class Picture : MonoBehaviour
         gameObject.GetComponent<Renderer>().material = _secondMaterial;
     }
 
-    public void Deactivate() {  gameObject.SetActive(false); }
+    public void Deactivate() 
+    {
+        StartCoroutine(DeactivateCoroutine());
+    }
+
+    private IEnumerator DeactivateCoroutine()
+    {
+        Revealed = false;
+
+        yield return new WaitForSeconds(1f);
+
+        gameObject.SetActive(false);
+    }
 }
