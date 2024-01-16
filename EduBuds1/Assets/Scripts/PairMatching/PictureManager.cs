@@ -159,7 +159,7 @@ public class PictureManager : MonoBehaviour
     private void DestroyPicture()
     {
         PuzzleRevealedNumber = RevealedState.NoRevealed;
-        System.Threading.Thread.Sleep(400);
+        System.Threading.Thread.Sleep(250);
 
         PictureList[_picToDestroy1].Deactivate();
         PictureList[_picToDestroy2].Deactivate();
@@ -171,7 +171,7 @@ public class PictureManager : MonoBehaviour
 
     private void FlipBack()
     {
-        System.Threading.Thread.Sleep(500);
+        System.Threading.Thread.Sleep(250);
 
         PictureList[_firstRevealedPic].FlipBack();
         PictureList[_secondRevealedPic].FlipBack();
