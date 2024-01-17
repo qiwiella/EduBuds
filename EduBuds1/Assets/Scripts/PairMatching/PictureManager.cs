@@ -17,8 +17,6 @@ public class PictureManager : MonoBehaviour
     [Header("End Game Screen")]
     public GameObject EndGamePanel;
 
-    public GameObject catIconImage;
-
     public GameObject NewBestScoreText;
     public GameObject YourScoreText;
     public GameObject EndTimeText;
@@ -96,8 +94,6 @@ public class PictureManager : MonoBehaviour
         _pairNumbers = (int)GameSettings.Instance.GetPairNumber();
 
         _gameTimer = GameObject.Find("Main Camera").GetComponent<Timer>();
-
-        catIconImage = GameObject.Find("catIconImage");
 
         LoadMaterials(); 
 
@@ -266,7 +262,6 @@ public class PictureManager : MonoBehaviour
         {
             CurrentGameState = GameState.GameEnd;
             _gameTimer.StopTimer();
-            Config.PlaceScoreOnBoard(_gameTimer.GetCurrentTime());  
         }
 
         return (CurrentGameState == GameState.GameEnd);
@@ -275,19 +270,7 @@ public class PictureManager : MonoBehaviour
     private void ShowEndGameInformation()
     {
         EndGamePanel.SetActive(true);
-        catIconImage.SetActive(false);
-
-
-        if(Config.IsBestScore())
-        {
-            NewBestScoreText.SetActive(true);
-            YourScoreText.SetActive(false);
-        }
-        else
-        {
-            NewBestScoreText.SetActive(false);
-            YourScoreText.SetActive(true);
-        }
+        YourScoreText.SetActive(true);
 
         var timer = _gameTimer.GetCurrentTime();
         var minutes = Mathf.Floor(timer / 60);
