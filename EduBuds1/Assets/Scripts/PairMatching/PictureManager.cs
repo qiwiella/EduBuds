@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PictureManager : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class PictureManager : MonoBehaviour
     public Vector2 StartPosition = new Vector2(-7f, 3f);
     public Vector2 StartPositionFift = new Vector2(-7.7f, 2.5f);
     public Vector2 StartPositionTwent = new Vector2(-6.7f, 3f);
+
+    [Space]
+    [Header("End Game Screen")]
+    public GameObject EndGamePanel;
+
+    public GameObject NewBestScoreText;
+    public GameObject YourScoreText;
+    public GameObject EndTimeText;
 
     public enum GameState 
     {   NoAction, 
@@ -65,11 +74,14 @@ public class PictureManager : MonoBehaviour
 
     private bool _coroutineStarted = false;
 
+    private int _pairNumbers;
+    private int _removedPairs;
+    private Timer _gameTimer;
+
 
 
     void Start()
     {
-        LoadMaterials();
 
         CurrentGameState = GameState.NoAction;
         CurrentPuzzleState = PuzzleState.CanRotate;
@@ -78,6 +90,12 @@ public class PictureManager : MonoBehaviour
         _firstRevealedPic = -1;
         _secondRevealedPic = -1;
 
+        _removedPairs = 0;
+        _pairNumbers = (int)GameSettings.Instance.GetPairNumber();
+
+        _gameTimer = GameObject.Find("Main Camera").GetComponent<Timer>();
+
+        LoadMaterials(); 
 
         if (GameSettings.Instance.GetPairNumber() == GameSettings.EPairNumber.E10Pairs)
         {
@@ -164,6 +182,7 @@ public class PictureManager : MonoBehaviour
         PictureList[_picToDestroy1].Deactivate();
         PictureList[_picToDestroy2].Deactivate();
         _revealedPicNumber = 0;
+        _removedPairs++;
         CurrentGameState = GameState.NoAction;
         CurrentPuzzleState = PuzzleState.CanRotate;
     }
@@ -214,6 +233,7 @@ public class PictureManager : MonoBehaviour
             if(CurrentPuzzleState == PuzzleState.CanRotate )
             {
                 DestroyPicture();
+                CheckGameEnd();
             }
         }
 
@@ -224,6 +244,40 @@ public class PictureManager : MonoBehaviour
                StartCoroutine( FlipBack());
             }
         }
+
+        if(CurrentGameState == GameState.GameEnd)
+        {
+            if (PictureList[_firstRevealedPic].gameObject.activeSelf == false && PictureList[_secondRevealedPic].gameObject.activeSelf == false && EndGamePanel.activeSelf == false )
+            {
+                ShowEndGameInformation();
+            }
+        }
+    }
+
+
+
+    private bool CheckGameEnd()
+    {
+        if(_removedPairs == _pairNumbers && CurrentGameState != GameState.GameEnd)
+        {
+            CurrentGameState = GameState.GameEnd;
+            _gameTimer.StopTimer();
+        }
+
+        return (CurrentGameState == GameState.GameEnd);
+    }
+
+    private void ShowEndGameInformation()
+    {
+        EndGamePanel.SetActive(true);
+        YourScoreText.SetActive(true);
+
+        var timer = _gameTimer.GetCurrentTime();
+        var minutes = Mathf.Floor(timer / 60);
+        var seconds = Mathf.RoundToInt(timer % 60);
+        var newText = minutes.ToString("00") + ":" + seconds.ToString("00");
+        EndTimeText.GetComponent<Text>().text = newText; 
+
     }
 
     private void SpawnPictureMesh(int rows, int columns, Vector2 pos, Vector2 offset, bool scaleDown)
