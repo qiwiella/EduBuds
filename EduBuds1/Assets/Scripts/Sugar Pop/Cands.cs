@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Cands : MonoBehaviour
 {
-    float x, y;
+    public float x, y;
     bool should_it_fall = true; //düþsün mü? evet
     GameObject choice_tool;
 
@@ -142,7 +143,7 @@ public class Cands : MonoBehaviour
         }
     }
 
-    void Check_X_Axis()
+    public void Check_X_Axis()
     {
         //saðýndaki nesnelerin kontrolü
         for (int i = (int) x + 1; i < Sugar_maker.candies_in_the_game.GetLength(0); i++)
@@ -170,7 +171,7 @@ public class Cands : MonoBehaviour
             }
         }
     }
-    void Check_Y_Axis()
+    public void Check_Y_Axis()
     {
         //saðýndaki nesnelerin kontrolü
         for (int i = (int) y + 1; i < Sugar_maker.candies_in_the_game.GetLength(1); i++)
@@ -200,7 +201,7 @@ public class Cands : MonoBehaviour
     }
     //oynayýcýnýn iç þekeri ayný hizaya geldiðini görmesi için enumerator kullanýyorum.
     //direktr yok etmesini istemiyorum. Disappear = yok olamak, yok etmek
-    IEnumerator Disappear()
+    public IEnumerator Disappear()
     {
         yield return new WaitForSeconds(0.3f);
         //þekerlerinn sayýsý 2 den büyük ise
@@ -224,8 +225,10 @@ public class Cands : MonoBehaviour
                 }
             }
         }
+        
     }
 
+    
 }
 
 

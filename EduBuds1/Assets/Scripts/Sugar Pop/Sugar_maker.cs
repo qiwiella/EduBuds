@@ -22,23 +22,28 @@ public class Sugar_maker : MonoBehaviour
         }
 
     }
-    public void Creat_Cands(int x, int y) // konumu vermesini isteyerek þeker oluþtuacaðýz.
+
+    
+
+    private void Creat_Cands(int x, int y)
     {
+        // Rastgele bir þeker objesi seç
         GameObject random_candy_object = Create_Random_Candy();
 
-        // rastgele þeker al, kordinat, bir rotasyon vermedik(0,0,0)
-        GameObject new_cands = GameObject.Instantiate (random_candy_object, new Vector3 (x, y+10, 0), Quaternion.identity);
+        // Yeni þeker objesini oluþtur ve konumunu ayarla
+        GameObject new_cands = GameObject.Instantiate(random_candy_object, new Vector3(x, y + 10, 0), Quaternion.identity);
 
-        // Her þekerin, þeker scriptini al, yeni konum oluþtur(creat_new_location) yap.
-
-        Cands cand = new_cands.GetComponent<Cands> ();
+        // Yeni þekerin Cands bileþenini al ve gerekli ayarlamalarý yap
+        Cands cand = new_cands.GetComponent<Cands>();
         cand.colour = random_candy_object.name;
         cand.Enter_New_Location(x, y);
         candies_in_the_game[x, y] = cand;
 
-        // ben y de 10 konumda duruyorum y dðerine gelmesi için yavaþ yavaþ düþmesi gerekecek
+        // Yavaþça aþaðý düþmesi için coroutine baþlat
         StartCoroutine(MoveCandDown(cand));
 
+        // Oluþturulan þekerin sayýsý 2'den büyükse yok et
+        //StartCoroutine(cand.Disappear());
     }
     IEnumerator MoveCandDown(Cands cand)
     {
@@ -77,11 +82,25 @@ public class Sugar_maker : MonoBehaviour
                     cand.Enter_New_Location(x, y);
                     candies_in_the_game[x, y] = cand;
 
-                    StartCoroutine(MoveCandDown(cand)); // Düþme animasyonu baþlat
+                    // Yavaþça aþaðý düþmesi için coroutine baþlat
+                    StartCoroutine(MoveCandDown(cand));
+
+                    // Oluþturulan þekerin sayýsý 2'den büyükse yok et
+                    //StartCoroutine(cand.Disappear());
                 }
             }
         }
+        CheckAndHandleMatches(); // Yeni þekerler oluþturulduktan sonra eþleþmeleri kontrol et
+
     }
+
+    void CheckAndHandleMatches()
+{
+    // Bu metotu güncelleyerek, üç veya daha fazla ayný renkte þekerleri kontrol edebilir ve istediðiniz iþlemi gerçekleþtirebilirsiniz.
+    // Örneðin, eþleþen þekerleri yok etmek veya baþka bir iþlem gerçekleþtirmek.
+
+    // Ýlgili kontrol ve iþlemleri burada gerçekleþtirin.
+}
     public GameObject Create_Random_Candy(string excludedColor = "")   //hangi þekeri oluþturduysam onu belirteceðim
     {
         List<GameObject> availableCandies = new List<GameObject>();
@@ -89,6 +108,7 @@ public class Sugar_maker : MonoBehaviour
         {
             if (!candy.name.Equals(excludedColor)) // Ayný renkte þekerden bir daha oluþturmamak için kontrol
             {
+
                 availableCandies.Add(candy);
             }
         }
@@ -96,8 +116,7 @@ public class Sugar_maker : MonoBehaviour
         int rand = Random.Range(0, availableCandies.Count); //min 0, en yüksek þeker uzunluðu
         return availableCandies[rand]; // bunlarýn içinden rastgele bir sayý alacak
     }
-    void Update()
-    {
-        
-    }
+    
+    
+
 }
