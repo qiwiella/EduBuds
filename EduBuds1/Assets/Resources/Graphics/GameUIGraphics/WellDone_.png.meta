@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: a906271c11993fa4cb70dc2f1094f424
+guid: b3bfd24faf3f63c4b94f34f775f597d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1681374529518346724
-    second: WellDone_0
+      213: -2334037558153303963
+    second: WellDone__0
   - first:
-      213: -5577748680390464478
-    second: WellDone_1
+      213: 6961738911418227410
+    second: WellDone__1
   - first:
-      213: -1164546663268567979
-    second: WellDone_2
+      213: 2527692759002152185
+    second: WellDone__2
   - first:
-      213: 8285197301413451999
-    second: WellDone_3
+      213: 7554971910556483339
+    second: WellDone__3
   - first:
-      213: -3333292321632675735
-    second: WellDone_4
+      213: -4739431612564628285
+    second: WellDone__4
   - first:
-      213: -3874533852512771159
-    second: WellDone_5
+      213: 3606783813168047690
+    second: WellDone__5
   - first:
-      213: 8305279740467058324
-    second: WellDone_6
+      213: 5252072744634268217
+    second: WellDone__6
   - first:
-      213: -8379720337100222813
-    second: WellDone_7
-  - first:
-      213: 2924924553692084123
-    second: WellDone_8
-  - first:
-      213: -8700094198107867230
-    second: WellDone_9
-  - first:
-      213: -690146422470625206
-    second: WellDone_10
-  - first:
-      213: -7490976155903431548
-    second: WellDone_11
+      213: 6936899605511732371
+    second: WellDone__7
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -131,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WellDone_0
+      name: WellDone__0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 371
-        height: 224
+        x: 435
+        y: 412
+        width: 251
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1e5ba116ce8aa8e0800000000000000
-      internalID: -1681374529518346724
+      spriteID: 5682ad50535db9fd0800000000000000
+      internalID: -2334037558153303963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_1
+      name: WellDone__1
       rect:
         serializedVersion: 2
-        x: 376
-        y: 15
-        width: 223
-        height: 206
+        x: 687
+        y: 409
+        width: 96
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22c2cea902bd792b0800000000000000
-      internalID: -5577748680390464478
+      spriteID: 2da1912b7a01d9060800000000000000
+      internalID: 6961738911418227410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_2
+      name: WellDone__2
       rect:
         serializedVersion: 2
-        x: 670
-        y: 0
-        width: 196
-        height: 219
+        x: 787
+        y: 409
+        width: 97
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 554b283daf2b6dfe0800000000000000
-      internalID: -1164546663268567979
+      spriteID: 9fc76a90c2b241320800000000000000
+      internalID: 2527692759002152185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_3
+      name: WellDone__3
       rect:
         serializedVersion: 2
-        x: 870
-        y: 15
-        width: 186
-        height: 204
+        x: 924
+        y: 384
+        width: 251
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd816cc7c0feaf270800000000000000
-      internalID: 8285197301413451999
+      spriteID: b0ff5c8bce6a8d860800000000000000
+      internalID: 7554971910556483339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_4
+      name: WellDone__4
       rect:
         serializedVersion: 2
-        x: 1059
-        y: 17
-        width: 166
-        height: 211
+        x: 1174
+        y: 388
+        width: 155
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9681c844b44cdb1d0800000000000000
-      internalID: -3333292321632675735
+      spriteID: 3cc14d71f082a3eb0800000000000000
+      internalID: -4739431612564628285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_5
+      name: WellDone__5
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 0
-        width: 159
-        height: 207
+        x: 1328
+        y: 412
+        width: 88
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a320c24df3ea3ac0800000000000000
-      internalID: -3874533852512771159
+      spriteID: a46a28db4cedd0230800000000000000
+      internalID: 3606783813168047690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_6
+      name: WellDone__6
       rect:
         serializedVersion: 2
-        x: 1471
-        y: 52
-        width: 38
-        height: 179
+        x: 1420
+        y: 429
+        width: 58
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49699c2bbe7424370800000000000000
-      internalID: 8305279740467058324
+      spriteID: 93abf66a55c13e840800000000000000
+      internalID: 5252072744634268217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WellDone_7
+      name: WellDone__7
       rect:
         serializedVersion: 2
-        x: 1524
-        y: 52
-        width: 38
-        height: 179
+        x: 1423
+        y: 399
+        width: 41
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,92 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ae460640c045bb80800000000000000
-      internalID: -8379720337100222813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WellDone_8
-      rect:
-        serializedVersion: 2
-        x: 1576
-        y: 52
-        width: 37
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9772a9726b679820800000000000000
-      internalID: 2924924553692084123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WellDone_9
-      rect:
-        serializedVersion: 2
-        x: 1468
-        y: 14
-        width: 37
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a7f7510c6e034780800000000000000
-      internalID: -8700094198107867230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WellDone_10
-      rect:
-        serializedVersion: 2
-        x: 1521
-        y: 14
-        width: 37
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a48b1ad3c7b1c66f0800000000000000
-      internalID: -690146422470625206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WellDone_11
-      rect:
-        serializedVersion: 2
-        x: 1573
-        y: 14
-        width: 38
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48c647600e4ba0890800000000000000
-      internalID: -7490976155903431548
+      spriteID: 39cf21d1071d44060800000000000000
+      internalID: 6936899605511732371
       vertices: []
       indices: 
       edges: []
@@ -393,18 +297,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WellDone_0: -1681374529518346724
-      WellDone_1: -5577748680390464478
-      WellDone_10: -690146422470625206
-      WellDone_11: -7490976155903431548
-      WellDone_2: -1164546663268567979
-      WellDone_3: 8285197301413451999
-      WellDone_4: -3333292321632675735
-      WellDone_5: -3874533852512771159
-      WellDone_6: 8305279740467058324
-      WellDone_7: -8379720337100222813
-      WellDone_8: 2924924553692084123
-      WellDone_9: -8700094198107867230
+      WellDone__0: -2334037558153303963
+      WellDone__1: 6961738911418227410
+      WellDone__2: 2527692759002152185
+      WellDone__3: 7554971910556483339
+      WellDone__4: -4739431612564628285
+      WellDone__5: 3606783813168047690
+      WellDone__6: 5252072744634268217
+      WellDone__7: 6936899605511732371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
